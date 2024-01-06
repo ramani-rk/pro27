@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <style>
+        table
+            {
+                border-collapse: collapse;
+                width: 100px;
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+    <center>
+    <h1>Webpage</h1>
+    <table border="3px" cellspacing="10px" cellpadding="10px">
+        <tr>
+            <th>Topics</th>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Email</th>
+        </tr>
+        {% for wo in webpage %}
+        <tr>
+            <td>{{wo.topic_name}}</td>
+            <td>{{wo.name}}</td>
+            <td>{{wo.url}}</td>
+            <td>{{wo.email}}</td>
+        </tr>
+        {% endfor%}
+    </table>
+    </center>
+</body>
+</html>
